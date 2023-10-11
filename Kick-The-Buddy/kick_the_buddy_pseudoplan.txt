@@ -1,0 +1,53 @@
+Inicio del Programa "Kick The Buddy"
+
+// Declarar variables
+Entero vidaManiqui = 100
+Texto nombreManiqui
+
+// Solicitar al usuario el nombre del maniquí
+Escribir("Bienvenido a Kick The Buddy")
+Escribir("Por favor, ingresa el nombre del maniquí:")
+Leer(nombreManiqui)
+
+// Mostrar mensaje de bienvenida
+Escribir("¡Bienvenido, " + nombreManiqui + "!")
+Escribir("El maniquí tiene 100 puntos de vida.")
+
+// Inicio del bucle de juego
+Mientras vidaManiqui > 0 Hacer
+    // Mostrar opciones de ataque al usuario
+    Escribir("Elige una acción:")
+    Escribir("1. Golpear al maniquí")
+    Escribir("2. Disparar al maniquí")
+    Escribir("3. Explotar al maniquí")
+    Escribir("4. Salir")
+
+    // Leer la elección del usuario
+    Entero opcion
+    Leer(opcion)
+
+    // Procesar la elección del usuario
+    Según opcion Hacer
+        Caso 1:
+            // Golpear al maniquí
+            vidaManiqui = vidaManiqui - 10
+            Escribir("Has golpeado a " + nombreManiqui + ". Vida restante: " + vidaManiqui)
+        Caso 2:
+            // Disparar al maniquí
+            vidaManiqui = vidaManiqui - 20
+            Escribir("Has disparado a " + nombreManiqui + ". Vida restante: " + vidaManiqui)
+        Caso 3:
+            // Explotar al maniquí
+            vidaManiqui = vidaManiqui - 30
+            Escribir("Has explotado a " + nombreManiqui + ". Vida restante: " + vidaManiqui)
+        Caso 4:
+            // Salir del juego
+            Escribir("Gracias por jugar. ¡Hasta luego!")
+            Salir del bucle
+        De Otro Modo:
+            // Opción no válida
+            Escribir("Opción no válida. Por favor, elige una acción válida.")
+    Fin Según
+Fin Mientras
+
+// Fin del Programa "Kick The Buddy"
